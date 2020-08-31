@@ -1,7 +1,6 @@
 # flake8: noqa
-from moban_ansible._version import __version__
-from moban_ansible._version import __author__
 from lml.loader import scan_plugins_regex
+from moban_ansible._version import __author__, __version__
 
 ANSIBLE_LIBRARIES = "^moban_ansible_.+$"
 ANSIBLE_EXTENSIONS = [
