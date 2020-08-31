@@ -1,0 +1,13 @@
+name: "moban-ansible"
+organisation: "moremoban"
+author: "chfw"
+contact: "info@moremoban.org"
+company: "C.W."
+version: "0.0.1"
+current_version: "0.0.1"
+release: "0.0.0"
+copyright_year: 2020
+license: newbsd
+dependencies: []
+description: "Ansible filters, tests and utility functions for moban users"
+lint_command: make install_test lint format git-diff-check
