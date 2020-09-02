@@ -11,3 +11,4 @@ license: newbsd
 dependencies: []
 description: "Ansible filters, tests and utility functions for moban users"
 lint_command: make install_test lint format git-diff-check
+moban_command: moban -f mobanfile

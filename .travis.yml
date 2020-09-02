@@ -30,7 +30,7 @@ stages:
   stage: moban
   install: pip install moban>=0.0.4 gitfs2 pypifs
   script:
-    - moban
+    - moban -f mobanfile
     - git diff --exit-code
 
 jobs:
