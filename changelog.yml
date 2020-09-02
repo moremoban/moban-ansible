@@ -4,6 +4,6 @@ releases:
 - changes:
   - action: first release
     details:
-    - what a feat!
+    - what a feat! files tests are available.
   version: 0.0.1
-  date: 
+  date: 02.09.2020
