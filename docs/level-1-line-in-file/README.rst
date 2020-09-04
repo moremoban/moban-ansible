@@ -4,12 +4,14 @@ level 1 - lineinfile
 It has been requested to have line in file feature from ansible. So far, it supports three parameters.
 
 
-============ =================== =================================================================
-Parameter    Choices/Defaults    Comments
-============ =================== =================================================================
-state        'present', 'absent' Whether the line should be there or not.
-regrexp                          The regular expression to look for in every line of the file.
-line                             The line to insert/replace into the file.
+.. table:: A list of supported commands
+
+   ============ =================== =================================================================
+   Parameter    Choices/Defaults    Comments
+   ============ =================== =================================================================
+   state        'present', 'absent' Whether the line should be there or not.
+   regrexp                          The regular expression to look for in every line of the file.
+   line                             The line to insert/replace into the file.
 
 
 Here are currently supported features::

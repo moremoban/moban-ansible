@@ -5,10 +5,11 @@ contact: "info@moremoban.org"
 company: "C.W."
 version: "0.0.2"
 current_version: "0.0.2"
-release: "0.0.1"
+release: "0.0.2"
 copyright_year: 2020
 license: newbsd
-dependencies: []
+dependencies:
+  - moban>=0.8.1
 description: "Ansible filters, tests and utility functions for moban users"
 lint_command: make install_test lint format git-diff-check
 moban_command: moban -f mobanfile

@@ -2,6 +2,12 @@ name: moban-ansible
 organisation: moremoban
 releases:
 - changes:
+  - action: added
+    details:
+    - "`#1`: three parameters supported in lineinfile module of ansible"
+  version: 0.0.2
+  date: 04.09.2020
+- changes:
   - action: first release
     details:
     - what a feat! files tests are available.
