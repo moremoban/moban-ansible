@@ -5,8 +5,8 @@ from moban.core.content_processor import ContentProcessor
 
 @ContentProcessor("lineinfile", "Checking", "Checked")
 def line_in_file(content: str, options: dict) -> str:
+    content = content.decode()
     regexp = options.get("regexp")
-    create = options.get("create", False)
     state = options.get("state", "present")
 
     lines = content.split("\n")
@@ -14,7 +14,7 @@ def line_in_file(content: str, options: dict) -> str:
     if state == "present":
         if regexp:
             lines = present(lines, options)
-        elif create:
+        else:
             # regexp is None or ''
             # append the line to the end
             line = options.get("line")
@@ -24,7 +24,8 @@ def line_in_file(content: str, options: dict) -> str:
     else:
         lines = list(absent(lines, options))
 
-    return "\n".join(lines)
+    content = "\n".join(lines)
+    return content.encode()
 
 
 def present(lines, options):
