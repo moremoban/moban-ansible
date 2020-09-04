@@ -32,14 +32,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "moban-ansible"
 AUTHOR = "chfw"
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 EMAIL = "info@moremoban.org"
 LICENSE = "newbsd"
 DESCRIPTION = (
     "Ansible filters, tests and utility functions for moban users"
 )
 URL = "https://github.com/moremoban/moban-ansible"
-DOWNLOAD_URL = "%s/archive/0.0.1.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.0.2.tar.gz" % URL
 FILES = ["README.rst", "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -62,15 +62,17 @@ CLASSIFIERS = [
 
 
 INSTALL_REQUIRES = [
+    "moban>=0.8.1",
 ]
 SETUP_COMMANDS = {}
 
 PACKAGES = find_packages(exclude=["ez_setup", "examples", "tests", "tests.*"])
-EXTRAS_REQUIRE = {}
+EXTRAS_REQUIRE = {
+}
 # You do not need to read beyond this line
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
-GS_COMMAND = ("gs moban-ansible v0.0.1 " +
-              "Find 0.0.1 in changelog for more details")
+GS_COMMAND = ("gs moban-ansible v0.0.2 " +
+              "Find 0.0.2 in changelog for more details")
 NO_GS_MESSAGE = ("Automatic github release is disabled. " +
                  "Please install gease to enable it.")
 UPLOAD_FAILED_MSG = (
