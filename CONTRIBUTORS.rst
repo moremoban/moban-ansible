@@ -1,5 +1,7 @@
 
-0 contributors
+1 contributors
 ================================================================================
 
 In alphabetical order:
+
+* `pgajdos <https://github.com/pgajdos>`_
