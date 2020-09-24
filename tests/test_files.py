@@ -2,7 +2,7 @@ import sys
 from io import StringIO
 from unittest.mock import patch
 
-from nose.tools import eq_
+import pytest
 
 
 def test_stdout():
@@ -12,4 +12,4 @@ def test_stdout():
             from moban.main import main
 
             main()
-            eq_(fake_stdout.getvalue(), "True\n")
+            assert fake_stdout.getvalue() == "True\n"
