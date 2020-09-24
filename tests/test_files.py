@@ -2,6 +2,7 @@ import sys
 from io import StringIO
 from unittest.mock import patch
 
+
 def test_stdout():
     test_args = ["moban", "-t", "{{'tests' is directory}}"]
     with patch.object(sys, "argv", test_args):
