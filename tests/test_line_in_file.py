@@ -1,5 +1,4 @@
 import pytest
-
 from moban_ansible.engines.line_in_file import line_in_file
 
 

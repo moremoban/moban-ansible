@@ -1,11 +1,11 @@
 import os
 import sys
+import unittest
 from textwrap import dedent
 
 from mock import patch
-import pytest
-import unittest
 
+import pytest
 from moban.main import main
 from fs.opener.parse import parse_fs_url
 from moban.externals import file_system
