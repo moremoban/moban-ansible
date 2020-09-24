@@ -1,5 +1,3 @@
-from nose.tools import eq_
-
 from moban_ansible.engines.line_in_file import line_in_file
 
 
@@ -11,7 +9,7 @@ def test_append_a_line():
     new_content = line_in_file(content, options)
     expected = "\n".join([content.decode(), options["line"]])
 
-    eq_(new_content, expected.encode())
+    assert new_content == expected.encode()
 
 
 def test_absent():
@@ -23,7 +21,7 @@ def test_absent():
     new_content = line_in_file(content, options)
     expected = "127.0.0.1 localhost"
 
-    eq_(new_content, expected.encode())
+    assert new_content == expected.encode()
 
 
 def test_present():
@@ -35,4 +33,4 @@ def test_present():
     new_content = line_in_file(content, options)
     expected = ["127.0.0.1 localhost", present_line]
 
-    eq_(new_content, "\n".join(expected).encode())
+    assert new_content == "\n".join(expected).encode()
